@@ -29,3 +29,54 @@ input {
 a {
   font-weight: 600;
 }
+
+.is-info {
+    width: 50% !important;
+    text-align: center;
+}
+
+#passcodeInput {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.centered {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display: none;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:#3298dc;
+  height: 1px;
+}
+
+
+/* $randomNumber: random(5);
+
+.thing {
+  animation-duration: $randomNumber + s;
+}
+
+@randomTop: "Math.round(Math.random() * 100)";
+@randomLeft: `Math.round(Math.random() * 100)`;
+
+.randomed {
+  position: fixed;
+  top: ~'@{randomTop}%';
+  left: ~'@{randomLeft}%';
+  transform: translate(-50%, -50%);
+} */
