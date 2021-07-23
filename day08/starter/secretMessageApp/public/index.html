@@ -2,11 +2,10 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+  <head class="head">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Secret Messaging App</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -16,15 +15,11 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="js/setUp.js"></script>
   </head>
 
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-menu is-active">
-        <a class="navbar-item" href="viewMessages.html">
-          View Your Messages
-        </a>
-      </div>
     </nav>
     <section class="hero is-fullheight">
         <br />
@@ -44,7 +39,7 @@
               </div>
             </div>
             <br />
-            <button class="button is-block is-fullwidth is-primary is-medium is-rounded">
+            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" onclick="submitMessage()">
               Send Message
             </button>
           </form>
