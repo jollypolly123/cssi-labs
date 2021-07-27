@@ -18,7 +18,7 @@
       "port": 8112
     },
     "hosting": {
-      "port": 8113
+      "port": 8115
     },
     "ui": {
       "enabled": true

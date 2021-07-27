@@ -25,7 +25,7 @@
     <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script src="js/signIn.js"></script>
+    <script defer src="js/signIn.js"></script>
   </head>
   <body>
 
@@ -41,9 +41,26 @@
                             Log in to view your notes or create a new one. 
                         </h2>
                         <br>
+                        <form action="javascript:void(0);">
+                            <div class="field">
+                            <div class="control">
+                                <input class="input is-medium is-rounded" type="text" id="username" placeholder="Enter your username" required></input>
+                            </div>
+                            </div>
+                            <div class="field">
+                            <div class="control">
+                                <input class="input is-medium is-rounded" type="text" id="passcode" placeholder="Enter your password" required />
+                            </div>
+                            </div>
+                            <br />
+                            <button id="manualSignIn" class="button is-link has-text-weight-medium is-medium is-centered">
+                            Sign In with Username and Password
+                            </button>
+                        </form>
+                        <br />
                         <p class="has-text-centered">
                             <a class="button is-medium is-info is-outlined" onclick="signIn()">
-                                Sign In
+                                Sign In with Google
                             </a>
                         </p>
                     </div>
