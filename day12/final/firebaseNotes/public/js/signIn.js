@@ -28,3 +28,13 @@ const signIn = () => {
     console.log(err);
   });
 }
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+
+$(".border-on-click").click( function() {
+  $(this).toggleClass("framed");
+});
