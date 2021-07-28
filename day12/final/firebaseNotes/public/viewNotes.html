@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Notes Are On Fire</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-	  <link rel="stylesheet" href="css/cards.css">
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script src="js/viewNotes.js"></script>
+    <link rel="icon" href="https://cdn.glitch.com/53a7a634-945e-4d08-a68d-eed09de32a3e%2F2857c915-3201-442d-98a5-fd1d7b77e708.image.png?v=1627431950215">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="css/cards.css" />
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -29,9 +32,20 @@
       <div class="section">
         <div class="columns">
           <div class="column has-text-centered">
-            <h1 class="title">Some of Your Greatest Ideas Started Here</h1><br>
+            <h1 class="title">Some of Your Greatest Ideas Started Here</h1>
           </div>
         </div>
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input class="input" width="100%" type="text" id="findLabel" placeholder="Filter by Label">
+          </div>
+          <div class="control">
+            <button class="button is-info" onclick="filterByLabel()">
+              Search
+            </button>
+          </div>
+        </div>
+        <br />
         <div id="app" class="columns is-multiline">
           <!-- Note cards will render here -->
         </div>
@@ -41,12 +55,23 @@
       <div class="container">
         <div class="content has-text-centered">
           <p>
-            <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
-            The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
+            <strong>Bulma</strong> by
+            <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is
+            licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            <br />
           </p>
         </div>
       </div>
     </footer>
-  </body>
 
+    <!-- Includes firebase core and all secondary SDKs. No need for other firebase CDN scripts. -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase.js"></script>
+
+    <!--   Authenticates firebase client with your firebase instance -->
+    <script src="js/firebase.js"></script>
+
+    <!--  INCLUDE ALL APPLICATION SCRIPTS HERE-->
+    <script src="js/viewNotes.js"></script>
+  </body>
 </html>
